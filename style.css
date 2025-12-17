@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    min-height: 100vh;
+    /* fallback universal */
+    min-height: 100svh;
+    /* Safari/iOS: viewport “pequena” estável */
+    min-height: 100dvh;
+    /* modernos: viewport dinâmica (ajusta com barra) */
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    place-items: center;
+}
+
+div.container{
+    background-color: rgb(207, 189, 189);
+    width: 50%;
+    min-width: 200px;
+    max-width: 300px;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(137, 137, 137, 0.502);
+}
+
+.container h1{
+    margin: 1em 0;
+    text-shadow: 1px 1px 5px grey;
+}
+
+.container p{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.negativo{
+    background-color: rgb(118, 19, 19);
+    color: rgb(218, 216, 216);
+}
