@@ -1,28 +1,22 @@
-let display = document.querySelector('.display');
-let btnAumentar = document.querySelector('.aumentar')
-let btnDiminuir = document.querySelector('.diminuir')
+const display = document.querySelector(".display");
+const btnAumentar = document.querySelector(".aumentar");
+const btnDiminuir = document.querySelector(".diminuir");
+
 let contador = 0;
 
-document.addEventListener('click', function(e){
-    const el = e.target;
+function render() {
+  display.textContent = String(contador);
+  display.classList.toggle("negativo", contador < 0);
+}
 
-    if(el.classList.contains('aumentar')){
-        contador++
-        display.innerText = contador
-    }
-    if(el.classList.contains('diminuir')){
-        contador--
-        display.innerText = contador
-    }
+btnAumentar.addEventListener("click", () => {
+  contador++;
+  render();
+});
 
-    if(display.innerText < 0){
-        display.classList.add('negativo')
-    }else{
-        display.classList.remove('negativo')
-    }
-})
+btnDiminuir.addEventListener("click", () => {
+  contador--;
+  render();
+});
 
-
-
-
-
+render();
